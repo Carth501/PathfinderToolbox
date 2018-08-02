@@ -10,45 +10,49 @@
    
     <body>
         <button onclick="window.location.href = '/'"> home </button><br/>
-		<h1> CRB Weather Controls </h1>
-        <button id="RollWeatherButton" disabled="true" onclick="weather.roll()"> Roll for CRB weather </button><br/><br/>
-        <div id="ClimateControls" class="hiddenRadioButtons">
-            <form class="climateSelector type">
-                <input id="GenericWeatherRadio" type="radio" name="climate" value="generic"/> Generic
-                <input type="radio" name="climate" value="cold"/> Cold
-                <input type="radio" name="climate" value="temperate"/> Temperate
-                <input type="radio" name="climate" value="desert"/> Desert
-            </form>
+
+        <h1> Weather Controls </h1>
+        <button id="WeatherAdvancedButton" disabled="true" onclick="toggleAdvanced()"> Advanced </button><br/><br/>
+        <div id="weather-basic">
+            <button id="RollWeatherButton" disabled="true" onclick="weather.roll()"> Roll for CRB weather </button><br/><br/>
+            <div id="ClimateControls" class="hiddenRadioButtons">
+                <form class="climateSelector type">
+                    <input id="GenericWeatherRadio" type="radio" name="climate" value="generic"/> Generic
+                    <input type="radio" name="climate" value="cold"/> Cold
+                    <input type="radio" name="climate" value="temperate"/> Temperate
+                    <input type="radio" name="climate" value="desert"/> Desert
+                </form>
+            </div>
+
+            <textarea id="weatherResults" rows="12" cols="80"></textarea>
+            <h2> insight block: </h2>
+            <textarea id="insightBlock" rows="1" cols="80"></textarea>
         </div>
 
-        <textarea id="weatherResults" rows="12" cols="80"></textarea>
-        <h2> insight block: </h2>
-        <textarea id="insightBlock" rows="1" cols="80"></textarea>
-
-		<h2> UW Weather Controls </h2>
-
-        <button id="RollUWWeatherButton" disabled="true" onclick="UWWeather.roll()"> Roll for Ultimate Wilderness weather </button><br/><br/>
-        <div id="UWSettings" class="hiddenRadioButtons">
-            <form class="UWClimateSelector">
-                <input type="radio" name="UWClimate" value="cold"/> Cold
-                <input id="UWTemperateWeatherRadio" type="radio" name="UWClimate" value="temperate"/> Temperate
-                <input type="radio" name="UWClimate" value="tropical"/> Tropical
-            </form>
-            <form class="UWAltitudeSelector">
-                <input type="radio" name="UWAltitude" value="sea_level"/> Sea Level
-                <input id="UWLowlandAltitudeRadio" type="radio" name="UWAltitude" value="lowland"/> Lowland
-                <input type="radio" name="UWAltitude" value="highland"/> Highland
-            </form>
-            <form class="UWSeasonSelector type">
-                <input type="radio" name="UWSeason" value="spring"/> Spring
-                <input id="UWSummerSeasonRadio" type="radio" name="UWSeason" value="summer"/> Summer
-                <input type="radio" name="UWSeason" value="fall"/> Fall
-                <input type="radio" name="UWSeason" value="winter"/> Winter
-            </form>
+        <div id="weather-advanced" class="hide-form">
+            <button id="RollUWWeatherButton" disabled="true" onclick="UWWeather.roll()"> Roll for Ultimate Wilderness weather </button><br/><br/>
+            <div id="UWSettings" class="hiddenRadioButtons">
+                <form class="UWClimateSelector">
+                    <input type="radio" name="UWClimate" value="cold"/> Cold
+                    <input id="UWTemperateWeatherRadio" type="radio" name="UWClimate" value="temperate"/> Temperate
+                    <input type="radio" name="UWClimate" value="tropical"/> Tropical
+                </form>
+                <form class="UWAltitudeSelector">
+                    <input type="radio" name="UWAltitude" value="sea_level"/> Sea Level
+                    <input id="UWLowlandAltitudeRadio" type="radio" name="UWAltitude" value="lowland"/> Lowland
+                    <input type="radio" name="UWAltitude" value="highland"/> Highland
+                </form>
+                <form class="UWSeasonSelector type">
+                    <input type="radio" name="UWSeason" value="spring"/> Spring
+                    <input id="UWSummerSeasonRadio" type="radio" name="UWSeason" value="summer"/> Summer
+                    <input type="radio" name="UWSeason" value="fall"/> Fall
+                    <input type="radio" name="UWSeason" value="winter"/> Winter
+                </form>
+            </div>
+            <textarea id="UWWeatherResults" rows="12" cols="80"></textarea>
+            <h2> insight block: </h2>
+            <textarea id="UWInsightBlock" rows="1" cols="80"></textarea>
         </div>
 
-        <textarea id="UWWeatherResults" rows="12" cols="80"></textarea>
-        <h2> insight block: </h2>
-        <textarea id="UWInsightBlock" rows="1" cols="80"></textarea>
     </body>
 </html>

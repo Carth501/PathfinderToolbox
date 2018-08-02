@@ -7,6 +7,7 @@ let weather = {
         grabTable(function(weatherTable){
             me.weatherTable = weatherTable;
             $("#RollWeatherButton").prop("disabled", false);
+            $("#WeatherAdvancedButton").prop("disabled", false);
             $("#ClimateControls").removeClass("hiddenRadioButtons");
             $("#GenericWeatherRadio").prop("checked", true);
         });
@@ -42,9 +43,25 @@ function d6roll() {
 }
 
 function grabTable(callback) {
-    $.ajax("/WeatherTable.json").done(function(data){
+    $.ajax("/json/WeatherTable.json").done(function(data){
         callback(JSON.parse(data));
     });
+}
+
+function toggleAdvanced() {
+    let basic = $('#weather-basic'),
+        advanced = $('#weather-advanced'),
+        toggleButton = $('#WeatherAdvancedButton');
+
+    if (advanced.hasClass('hide-form')) {
+        basic.addClass('hide-form');
+        advanced.removeClass('hide-form');
+        toggleButton.html('Basic');
+    } else {
+        basic.removeClass('hide-form');
+        advanced.addClass('hide-form');
+        toggleButton.html('Advanced');
+    }
 }
 
 

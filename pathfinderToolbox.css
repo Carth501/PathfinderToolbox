@@ -1,3 +1,7 @@
 .hiddenRadioButtons {
     display: none;
 }
+
+.hide-form {
+    display:none;
+}

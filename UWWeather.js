@@ -81,7 +81,7 @@ function singleDiceRoll(dice) {
 }
 
 function grabTable(callback) {
-    $.ajax("/tempBaselines.json").done(function(data){
+    $.ajax("/json/tempBaselines.json").done(function(data){
         callback(JSON.parse(data));
     });
 }
