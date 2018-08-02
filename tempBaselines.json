@@ -1,0 +1,30 @@
+
+{
+    "cold": {
+        "precipitationModifier": -1,
+        "seasons": {
+            "winter": 20,
+            "spring": 30,
+            "summer": 40,
+            "fall": 30
+        }
+    },
+    "temperate": {
+        "precipitationModifier": 0,
+        "seasons": {
+            "winter": 30,
+            "spring": 60,
+            "summer": 80,
+            "fall": 60
+        }
+    },
+    "tropical": {
+        "precipitationModifier": 1,
+        "seasons": {
+            "winter": 50,
+            "spring": 75,
+            "summer": 95,
+            "fall": 75
+        }
+    }
+}

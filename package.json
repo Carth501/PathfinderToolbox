@@ -1,0 +1,7 @@
+{
+  "name": "Pathfinder Toolbox",
+  "version": "",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}
