@@ -1,0 +1,31 @@
+<html>
+
+    <head>
+        <title>Roll Statistics</title>
+        <link rel="stylesheet" type="text/css" href="pathfinderToolbox.css">
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="rollStatistics.js"></script>
+    </head>
+   
+    <body>
+        <button onclick="window.location.href = '/'"> home </button><br/>
+        
+        <form class="target_ac type">
+            <span style="padding-right:20px"> Target AC </span>
+            <input type="number" id="target_ac" min="0" value="20">
+            <br>
+        </form>
+        <form class="bab type">
+            <span style="padding-right:20px"> BAB </span>
+            <input type="number" id="bab" min="0" value="0">
+            <br>
+        </form>
+        <form class="strength type">
+            <span style="padding-right:20px"> Strength Mod </span>
+            <input type="number" id="strength" min="0" value="0">
+            <br>
+        </form>
+        <span style="padding-right:20px"> % chance of hit: </span>
+        <input type="text" id="percentHit" readonly><br>
+    </body>
+</html>
